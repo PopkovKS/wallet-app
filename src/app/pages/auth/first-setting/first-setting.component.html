@@ -1,0 +1,25 @@
+<p>
+  first-setting works!
+</p>
+
+<ion-content>
+  <form (ngSubmit)="setForm()" [formGroup]="settingForm">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>
+          Multiple Selection
+        </ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Currency</ion-label>
+        <ion-select cancelText="Nah" okText="Okay!" formControlName="currency">
+          <ion-select-option value="bacon">Bacon</ion-select-option>
+          <ion-select-option value="olives">BlackOlives</ion-select-option>
+          <ion-select-option value="xcheese">ExtraCheese</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+  </form>
+</ion-content>

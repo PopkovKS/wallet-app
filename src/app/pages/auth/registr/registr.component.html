@@ -1,0 +1,49 @@
+<ion-content>
+  <h1 class="app-registr">Registration</h1>
+
+  <form (ngSubmit)="logForm()" [formGroup]="registerForm">
+    <ion-item-group class="auth-inputs-registr">
+
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input type="name" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Phone number</ion-label>
+        <ion-input type="number" formControlName="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>E-mail</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input type="password" formControlName="rePassword"></ion-input>
+      </ion-item>
+
+    </ion-item-group>
+
+    <ion-button
+      class="butt-registr"
+      expand="block"
+      type="submit"
+      [disabled]="!registerForm.valid"
+    >
+      Registration
+    </ion-button>
+
+  </form>
+
+  <ion-item>
+    <a [routerLink]="['/auth/login']">to login</a>
+  </ion-item>
+
+</ion-content>

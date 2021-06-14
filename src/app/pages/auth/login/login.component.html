@@ -1,0 +1,39 @@
+<ion-content>
+  <h1 class="app-name">WALLET</h1>
+
+  <form (ngSubmit)="logForm()" [formGroup]="user">
+
+    <ion-item-group class="auth-inputs">
+
+      <ion-item>
+        <ion-label>E-mail</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+    </ion-item-group>
+
+    <ion-button
+      expand="block"
+      type="submit"
+    >
+      Sign in
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      fill="outline"
+      [routerLink]="['/auth/registr']"
+    >
+      Sign up
+    </ion-button>
+
+  </form>
+
+</ion-content>
+
+
